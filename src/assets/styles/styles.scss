@@ -23,6 +23,14 @@ body {
   font: 400 16px/1.2 $primary-font-family;
 }
 
+.mt24 {
+  margin-top: 24px;
+}
+
+.mt36 {
+  margin-top: 36px;
+}
+
 .section {
   width: 100%;
   min-height: 100vh;
@@ -89,16 +97,31 @@ body {
     display: flex;
     padding-left: 48px;
     padding-right: 48px;
-    gap: 48px;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     &:nth-child(even) {
-      flex-direction: row-reverse;
+      .section__top {
+        flex-direction: row-reverse;
+      }
     }
 
     .section {
+      &__top {
+        display: flex;
+        gap: 48px;
+        justify-content: center;
+      }
+
+      &__bottom {
+        width: 978px;
+        max-width: 100%;
+        margin-top: 42px;
+      }
+
       &__main {
-        min-width: 25%;
+        //min-width: 25%;
+        min-width: 430px;
         margin-top: 24px;
 
         .header {
@@ -112,8 +135,9 @@ body {
       }
 
       &__aside {
-        width: 100%;
-        max-width: 40%;
+        min-width: 480px;
+        //width: 100%;
+        //max-width: 40%;
         display: flex;
         gap: 24px;
         align-items: center;
@@ -123,6 +147,31 @@ body {
           width: 100%;
           max-width: 480px;
           height: auto;
+        }
+
+        &__layout {
+          width: 100%;
+          display: flex;
+          gap: 24px;
+          align-items: center;
+          justify-content: space-around;
+
+          .block {
+            display: inline-flex;
+            gap: 4px;
+            align-items: center;
+            flex-direction: column;
+
+            &__value {
+              font-weight: 700;
+              font-size: 24px;
+            }
+
+            &__label {
+              display: inline-block;
+              font-size: 14px;
+            }
+          }
         }
       }
     }
@@ -179,99 +228,136 @@ body {
       }
     }
 
-    .estate__info {
-      margin-top: 24px;
-
-      &__row {
-        display: flex;
-        align-items: center;
-
-        &:nth-child(n+2) {
-          margin-top: 12px;
-        }
-
-        &::before {
-          width: 48px;
-          height: 48px;
-          content: '';
-        }
-
-        &.area {
-          &::before {
-            background: url(../images/icons/area.png) 50% / cover no-repeat;
-          }
-        }
-
-        &.floor {
-          &::before {
-            background: url(../images/icons/building.png) 50% / cover no-repeat;
-          }
-        }
-
-        &.height {
-          &::before {
-            background: url(../images/icons/height.png) 50% / cover no-repeat;
-          }
-        }
-
-        &.laundry {
-          &::before {
-            background: url(../images/icons/washing-machine.png) 50% / cover no-repeat;
-          }
-        }
-
-        &.garden {
-          &::before {
-            background: url(../images/icons/farm-house.png) 50% / cover no-repeat;
-          }
-        }
-
-        &.pool {
-          &::before {
-            background: url(../images/icons/swimming-pool.png) 50% / cover no-repeat;
-          }
-        }
-
-        &.private--entrance {
-          &::before {
-            background: url(../images/icons/home-key.png) 50% / cover no-repeat;
-          }
-        }
-
-        .label {
-          margin-left: 8px;
-        }
-
-        .value {
-          margin-left: 6px;
-          font-weight: 700;
-          font-size: 24px;
-        }
-      }
-    }
-
-    .estate__description {
-      margin-top: 24px;
-
-      &__title {
+    .estate {
+      &__subtitle {
         font-size: 24px;
         font-weight: 700;
       }
 
-      &__text {
-        max-width: 450px;
-        display: inline-block;
-        margin-top: 12px;
+      &__info {
+        &:not(.in--row) {
+          margin-top: 24px;
+        }
+
+        &.in--row {
+          max-width: 400px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px 24px;
+
+          .estate__info__row {
+            width: calc(50% - 12px);
+          }
+        }
+
+        &__row {
+          display: flex;
+          align-items: center;
+          flex-shrink: 1;
+
+          &:nth-child(n+2) {
+            margin-top: 12px;
+          }
+
+          &::before {
+            width: 42px;
+            height: 42px;
+            min-width: 42px;
+            margin-right: 8px;
+            content: '';
+          }
+
+          &.area {
+            &::before {
+              background: url(../images/icons/area.png) 50% / cover no-repeat;
+            }
+          }
+
+          &.floor {
+            &::before {
+              background: url(../images/icons/building.png) 50% / cover no-repeat;
+            }
+          }
+
+          &.height {
+            &::before {
+              background: url(../images/icons/height.png) 50% / cover no-repeat;
+            }
+          }
+
+          &.laundry {
+            &::before {
+              background: url(../images/icons/washing-machine.png) 50% / cover no-repeat;
+            }
+          }
+
+          &.garden {
+            &::before {
+              background: url(../images/icons/farm-house.png) 50% / cover no-repeat;
+            }
+          }
+
+          &.pool {
+            &::before {
+              background: url(../images/icons/swimming-pool.png) 50% / cover no-repeat;
+            }
+          }
+
+          &.private--entrance {
+            &::before {
+              background: url(../images/icons/home-key.png) 50% / cover no-repeat;
+            }
+          }
+
+          &.living--room {
+            &::before {
+              background: url(../images/icons/sofa.png) 50% / cover no-repeat;
+            }
+          }
+
+          &.terrace {
+            &::before {
+              background: url(../images/icons/terrace.png) 50% / cover no-repeat;
+            }
+          }
+
+          &.bedroom {
+            &::before {
+              background: url(../images/icons/bed.png) 50% / cover no-repeat;
+            }
+          }
+
+          .value {
+            margin-left: 6px;
+            font-weight: 700;
+            font-size: 24px;
+          }
+        }
+      }
+
+      &__description {
+        margin-top: 24px;
+
+        &__title {
+          font-size: 24px;
+          font-weight: 700;
+        }
+
+        &__text {
+          max-width: 450px;
+          display: inline-block;
+          margin-top: 12px;
+        }
       }
     }
 
     .investment {
-      margin-top: 36px;
+      min-width: 480px;
 
       &__title {
         color: $brand-color;
         letter-spacing: 1.5px;
-        font: 900 32px/1 $brand-font-family;
+        font: 900 42px/1 $brand-font-family;
       }
 
       &__description {
