@@ -1,0 +1,295 @@
+@font-face {
+  font-family: Mundo Sans Std;
+  src: url("MundoSansStd-Black.38f2a006.woff2") format("woff2"), url("MundoSansStd-Black.11a08a31.woff") format("woff"), url("Mundo Sans Std Black.20a35864.otf") format("otf");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Mundo Sans Std;
+  src: url("a30337d9402f45a61b4458dbdf6f23ae.7874bc12.eot");
+  src: url("a30337d9402f45a61b4458dbdf6f23ae.7874bc12.eot#iefix") format("embedded-opentype"), url("a30337d9402f45a61b4458dbdf6f23ae.2db5f9f5.woff") format("woff"), url("a30337d9402f45a61b4458dbdf6f23ae.31b17e11.woff2") format("woff2"), url("a30337d9402f45a61b4458dbdf6f23ae.38a8cdb3.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: local(Helvetica Neue Bold), local(Helvetica-Neue-Bold), url("HelveticaNeueCyr-Bold.264ec138.woff2") format("woff2"), url("HelveticaNeueCyr-Bold.d4982228.woff") format("woff"), url("HelveticaNeueCyr-Bold.cc43e1ed.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: local(Helvetica Neue Roman), local(Helvetica-Neue-Roman), url("HelveticaNeueCyr-Roman.90acdec3.woff2") format("woff2"), url("HelveticaNeueCyr-Roman.1cb718ab.woff") format("woff"), url("HelveticaNeueCyr-Roman.d31a64e9.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  color: #000;
+  font: 400 16px / 1.2 Helvetica Neue, arial;
+}
+
+.section {
+  outline: 1px dashed red;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.section.intro {
+  background: url("intro-bg-better.6815431e.png") 50% / cover no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.section.intro:before {
+  content: "";
+  background-color: #0006;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section.intro .container {
+  position: relative;
+}
+
+.section.intro .title {
+  color: #0096b1;
+  letter-spacing: 6px;
+  font: 400 164px / 1 Mundo Sans Std, arial;
+  display: inline-block;
+}
+
+.section.intro .intro__info {
+  margin-top: 24px;
+}
+
+.section.intro .intro__info__row {
+  align-items: flex-end;
+  gap: 16px;
+  display: flex;
+}
+
+.section.intro .intro__info__row:nth-child(n+2) {
+  margin-top: 16px;
+}
+
+.section.intro .intro__info__row .label {
+  color: #fff;
+  font-size: 22px;
+}
+
+.section.intro .intro__info__row .value {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.section.sides {
+  justify-content: center;
+  gap: 48px;
+  padding-left: 48px;
+  padding-right: 48px;
+  display: flex;
+}
+
+.section.sides:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.section.sides .section__main {
+  min-width: 25%;
+  margin-top: 24px;
+}
+
+.section.sides .section__main .header__title {
+  color: #0096b1;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font: 900 48px / 1 Mundo Sans Std, arial;
+}
+
+.section.sides .section__aside {
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 40%;
+  display: flex;
+}
+
+.section.sides .section__aside__img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+}
+
+.section.about {
+  align-items: stretch;
+}
+
+.section.about .description {
+  max-width: 420px;
+  margin-top: 10px;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.section.about .estates {
+  margin-top: 12px;
+}
+
+.section.about .estates__item {
+  margin-top: 4px;
+  font-size: 20px;
+}
+
+.section.about .section__main {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+.section.about .section__aside {
+  background: url("about.62a6935f.jpg") 50% / cover no-repeat;
+}
+
+.section.estate .header__floor {
+  margin-left: 6px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.section.estate .header__price {
+  color: #0096b1;
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+  font: 900 36px / 1 Mundo Sans Std, arial;
+  display: inline-block;
+}
+
+.section.estate .header__description {
+  font-size: 12px;
+}
+
+.section.estate .estate__info {
+  margin-top: 24px;
+}
+
+.section.estate .estate__info__row {
+  align-items: center;
+  display: flex;
+}
+
+.section.estate .estate__info__row:nth-child(n+2) {
+  margin-top: 12px;
+}
+
+.section.estate .estate__info__row:before {
+  content: "";
+  width: 48px;
+  height: 48px;
+}
+
+.section.estate .estate__info__row.area:before {
+  background: url("area.5f084f30.png") 50% / cover no-repeat;
+}
+
+.section.estate .estate__info__row.floor:before {
+  background: url("building.b301781f.png") 50% / cover no-repeat;
+}
+
+.section.estate .estate__info__row.height:before {
+  background: url("height.829ef577.png") 50% / cover no-repeat;
+}
+
+.section.estate .estate__info__row.laundry:before {
+  background: url("washing-machine.00a5e59d.png") 50% / cover no-repeat;
+}
+
+.section.estate .estate__info__row.garden:before {
+  background: url("farm-house.560a85af.png") 50% / cover no-repeat;
+}
+
+.section.estate .estate__info__row.pool:before {
+  background: url("swimming-pool.2d7a9dc6.png") 50% / cover no-repeat;
+}
+
+.section.estate .estate__info__row.private--entrance:before {
+  background: url("home-key.877ef784.png") 50% / cover no-repeat;
+}
+
+.section.estate .estate__info__row .label {
+  margin-left: 8px;
+}
+
+.section.estate .estate__info__row .value {
+  margin-left: 6px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.section.estate .estate__description {
+  margin-top: 24px;
+}
+
+.section.estate .estate__description__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.section.estate .estate__description__text {
+  max-width: 450px;
+  margin-top: 12px;
+  display: inline-block;
+}
+
+.section.estate .investment {
+  margin-top: 36px;
+}
+
+.section.estate .investment__title {
+  color: #0096b1;
+  letter-spacing: 1.5px;
+  font: 900 32px / 1 Mundo Sans Std, arial;
+}
+
+.section.estate .investment__description {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.section.estate .investment__sbt {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=index.28e47d84.css.map */

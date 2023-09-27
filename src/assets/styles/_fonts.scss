@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Mundo Sans Std';
+  src: url('../fonts/MundoSansStd/MundoSansStd-Black.woff2') format('woff2'),
+  url('../fonts/MundoSansStd/MundoSansStd-Black.woff') format('woff'),
+  url('../fonts/MundoSansStd/Mundo Sans Std Black.otf') format('otf');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mundo Sans Std";
+  src: url("../fonts/MundoSansStd/a30337d9402f45a61b4458dbdf6f23ae.eot");
+  src: url("../fonts/MundoSansStd/a30337d9402f45a61b4458dbdf6f23ae.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/MundoSansStd/a30337d9402f45a61b4458dbdf6f23ae.woff") format("woff"),
+  url("../fonts/MundoSansStd/a30337d9402f45a61b4458dbdf6f23ae.woff2") format("woff2"),
+  url("../fonts/MundoSansStd/a30337d9402f45a61b4458dbdf6f23ae.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue Bold'), local('Helvetica-Neue-Bold'),
+  url('../fonts/Helvetica/HelveticaNeueCyr-Bold.woff2') format('woff2'),
+  url('../fonts/Helvetica/HelveticaNeueCyr-Bold.woff') format('woff'),
+  url('../fonts/Helvetica/HelveticaNeueCyr-Bold.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue Roman'), local('Helvetica-Neue-Roman'),
+  url('../fonts/Helvetica/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+  url('../fonts/Helvetica/HelveticaNeueCyr-Roman.woff') format('woff'),
+  url('../fonts/Helvetica/HelveticaNeueCyr-Roman.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
