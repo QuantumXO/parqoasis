@@ -6,6 +6,12 @@ $secondary-color: #ffffff;
 $brand-font-family: 'Mundo Sans Std', arial;
 $primary-font-family: 'Helvetica Neue', arial;
 
+@mixin telephone {
+  @media (min-device-width: 320px) and (max-device-width: 767px) {
+    @content;
+  }
+}
+
 *, *::after, *::before {
   padding: 0;
   margin: 0;
@@ -19,6 +25,7 @@ html, body {
 }
 
 body {
+  scroll-behavior: smooth;
   color: $primary-color;
   font: 400 16px/1.2 $primary-font-family;
 }
@@ -29,6 +36,20 @@ body {
 
 .mt36 {
   margin-top: 36px;
+}
+
+.desktop--table {
+  display: table;
+  @include telephone {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+  @include telephone {
+    display: block;
+  }
 }
 
 .container {
@@ -73,6 +94,9 @@ body {
       color: $brand-color;
       letter-spacing: 6px;
       font: 400 174px/1 $brand-font-family;
+      @include telephone {
+        font-size: 72px;
+      }
     }
 
     .intro {
@@ -88,6 +112,7 @@ body {
         justify-content: flex-end;
         background-color: rgba(0, 0, 0, 0.6);
       }
+
       &__info {
         margin-top: 24px;
 
@@ -103,12 +128,18 @@ body {
           .label {
             font-size: 22px;
             color: $secondary-color;
+            @include telephone {
+              font-size: 16px;
+            }
           }
 
           .value {
             font-weight: 700;
             font-size: 24px;
             color: $secondary-color;
+            @include telephone {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -122,9 +153,18 @@ body {
     align-items: center;
     flex-direction: column;
 
+    @include telephone {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
     &:nth-child(even) {
       .section__top {
         flex-direction: row-reverse;
+
+        @include telephone {
+          flex-direction: column-reverse;
+        }
       }
     }
 
@@ -133,6 +173,11 @@ body {
         display: flex;
         gap: 48px;
         justify-content: center;
+
+        @include telephone {
+          align-items: center;
+          flex-direction: column-reverse;
+        }
       }
 
       &__bottom {
@@ -147,12 +192,21 @@ body {
         min-width: 430px;
         margin-top: 24px;
 
+        @include telephone {
+          max-width: 100%;
+          min-width: auto;
+        }
+
         .header {
           &__title {
             color: $brand-color;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             font: 900 64px/1 $brand-font-family;
+
+            @include telephone {
+              font-size: 42px;
+            }
           }
         }
       }
@@ -166,10 +220,20 @@ body {
         align-items: center;
         flex-direction: column;
 
+        @include telephone {
+          max-width: 100%;
+          min-height: 340px;
+          min-width: auto;
+        }
+
         &__img {
           width: 100%;
           max-width: 480px;
           height: auto;
+
+          @include telephone {
+            max-width: 100%;
+          }
         }
 
         &__layout {
@@ -188,11 +252,20 @@ body {
             &__value {
               font-weight: 700;
               font-size: 32px;
+
+              @include telephone {
+                font-size: 24px;
+                text-align: center;
+              }
             }
 
             &__label {
               display: inline-block;
               font-size: 14px;
+
+              @include telephone {
+                font-size: 12px;
+              }
             }
           }
         }
@@ -244,6 +317,10 @@ body {
         color: $brand-color;
         letter-spacing: 1.5px;
         font: 900 48px/1 $brand-font-family;
+
+        @include telephone {
+          font-size: 36px;
+        }
       }
 
       &__description {
@@ -277,6 +354,10 @@ body {
           display: flex;
           align-items: center;
           flex-shrink: 1;
+
+          @include telephone {
+            font-size: 14px;
+          }
 
           &:nth-child(n+2) {
             margin-top: 12px;
@@ -378,10 +459,18 @@ body {
     .investment {
       min-width: 480px;
 
+      @include telephone {
+        min-width: auto;
+      }
+
       &__title {
         color: $brand-color;
         letter-spacing: 1.5px;
         font: 900 46px/1 $brand-font-family;
+
+        @include telephone {
+          font-size: 32px;
+        }
       }
 
       &__description {
@@ -389,6 +478,10 @@ body {
         margin-top: 4px;
         font-weight: 700;
         font-size: 24px;
+
+        @include telephone {
+          font-size: 20px;
+        }
       }
 
       &__sbt {
@@ -411,7 +504,13 @@ body {
 
         &__img {
           width: auto;
-          max-height: 510px;
+          height: auto;
+          max-width: 100%;
+          max-height: calc(100% - 64px);
+          @include telephone {
+            max-height: 360px;
+            margin: 0 auto;
+          }
         }
       }
     }
@@ -421,6 +520,9 @@ body {
         font-size: 28px;
         font-weight: 700;
         text-transform: uppercase;
+        @include telephone {
+          font-size: 22px;
+        }
       }
 
       &__subtitle {
@@ -428,6 +530,9 @@ body {
         color: $brand-color;
         font: 900 52px / 1 $brand-font-family;
         text-transform: uppercase;
+        @include telephone {
+          font-size: 36px;
+        }
       }
 
       &__indicators {
@@ -436,6 +541,9 @@ body {
         gap: 34px;
         align-items: center;
         justify-content: space-between;
+        @include telephone {
+          gap: 16px;
+        }
 
         .block {
           max-width: 200px;
@@ -446,10 +554,16 @@ body {
           &__value {
             color: $brand-color;
             font: 900 86px / 1 $brand-font-family;
+            @include telephone {
+              font-size: 42px;
+            }
           }
 
           &__label {
             text-align: center;
+            @include telephone {
+              font-size: 12px;
+            }
           }
         }
       }
@@ -473,6 +587,10 @@ body {
 
     .container {
       position: relative;
+      @include telephone {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
     }
 
     .title {
@@ -481,6 +599,9 @@ body {
       letter-spacing: 1.5px;
       color: $secondary-color;
       font-size: 64px;
+      @include telephone {
+        font-size: 28px;
+      }
     }
 
     table {
@@ -491,6 +612,9 @@ body {
       margin-right: auto;
       border-collapse: separate;
       border-spacing: 0 16px;
+      @include telephone {
+        margin-top: 16px;
+      }
 
       th, td {
         padding: 16px;
@@ -553,20 +677,71 @@ body {
         }
       }
     }
+    .bali__cards {
+      margin-top: 36px;
+      .card {
+        width: 100%;
+        padding: 16px;
+        border-radius: 10px;
+        &:not(.bali) {
+          background-color: rgba(#4a4848, 0.3);
+          border: 2px solid #4a4848;
+        }
+        &.bali {
+          background-color: rgba($secondary-color, 0.3);
+          border: 2px solid $secondary-color;
+        }
+        &:nth-child(n+2) {
+          margin-top: 16px;
+        }
+        &__row {
+          display: flex;
+          padding: 8px 0;
+          align-items: center;
+          color: $secondary-color;
+          justify-content: space-between;
+          &:nth-child(n+2) {
+            margin-top: 4px;
+            border-bottom: 1px solid $secondary-color;
+          }
+          .label {
+            font-size: 14px;
+          }
+          .value {
+            font-weight: 700;
+          }
+        }
+      }
+    }
   }
 }
 
 .contacts {
+  display: flex;
   padding: 48px;
+  padding-bottom: 0;
+  @include telephone {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .container {
+    height: calc(100% - 96px);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
 
   &__top {
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
+    margin-top: 36px;
   }
 
   &__bottom {
-    margin-top: 36px;
+    width: 100%;
+    display: flex;
+    margin-top: 82px;
+    justify-content: center;
   }
 
   &__title {
@@ -578,6 +753,9 @@ body {
     letter-spacing: 1.2px;
     font-family: $brand-font-family;
     background-color: $secondary-color;
+    @include telephone {
+      font-size: 48px;
+    }
   }
 
   &__list {
@@ -586,6 +764,9 @@ body {
     margin-top: 56px;
     gap: 78px;
     justify-content: center;
+    @include telephone {
+      gap: 22px;
+    }
 
     &__item {
       display: inline-flex;
@@ -596,6 +777,10 @@ body {
         width: 54px;
         height: 54px;
         content: '';
+        @include telephone {
+          width: 36px;
+          height: 36px;
+        }
       }
 
       &.phone {
@@ -616,14 +801,21 @@ body {
         color: #5e5e62;
         letter-spacing: 1px;
         font-family: $brand-font-family;
+        @include telephone {
+          font-size: 28px;
+        }
       }
 
       .value {
         margin-top: 16px;
         font-size: 18px;
+        @include telephone {
+          font-size: 16px;
+        }
       }
 
-      .email {
+      .email,
+      .phone {
         color: $primary-color;
       }
     }
@@ -668,7 +860,7 @@ body {
         background-image: url(../images/icons/italy.png);
       }
 
-      &.ge {
+      &.de {
         background-image: url(../images/icons/germany.png);
       }
     }
