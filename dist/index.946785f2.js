@@ -587,18 +587,25 @@ const SUPPORTED_LANGUAGES = [
     "it",
     "pl"
 ];
-$.html5Translate = function(dict, lang) {
+// data-translate-Key=""
+$.html5Translate = function(lang) {
     $("[data-translate-key]").each(function() {
         const $this = $(this);
-        $this.html(dict[lang][$this.data("translateKey")]);
+        $this.html((0, _dictionaryJsDefault.default)[lang][$this.data("translateKey")]);
     });
 };
+function changeLanguage() {
+    const $this = $(this);
+    const lngCode = $this.attr("data-lng");
+    $.html5Translate(lngCode);
+}
 $(function() {
     const userLanguage = navigator?.language || navigator?.userLanguage;
     const userLanguageIsoCode = userLanguage?.split("-")[0];
     const isSupportedUserLanguage = SUPPORTED_LANGUAGES.includes(userLanguageIsoCode);
     const initialLanguage = isSupportedUserLanguage ? userLanguageIsoCode : DEFAULT_LANGUAGE;
-    $.html5Translate((0, _dictionaryJsDefault.default), initialLanguage);
+    $.html5Translate(initialLanguage);
+    $(".language").on("click", changeLanguage);
 });
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./dictionary.js":"iE9jp"}],"hgMhh":[function(require,module,exports) {
@@ -7336,17 +7343,60 @@ exports.export = function(dest, destName, get) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 exports.default = {
-    de: {
-        WELCOME: "WELCOME_de"
-    },
     en: {
-        WELCOME: "WELCOME"
-    },
-    it: {
-        WELCOME: "WELCOME_it"
+        WELCOME: "WELCOME",
+        START: "Start:",
+        "pre-sale": "25.09.2023 pre-sale",
+        "от 8 до 14 месяцев": "от 8 до 14 месяцев",
+        "First payment": "First payment:",
+        "от $5000": "от $5000",
+        "about project": "about project",
+        "PROJECT_DESCRIPTION": "Oasis by PARQ is a modern complex with the best infrastructure in Bali, located on 37 hectares, which will include 560 infrastructure facilities, namely:",
+        villas: "villas",
+        apartments: "apartments",
+        "guest houses": "guest houses"
     },
     pl: {
-        WELCOME: "WELCOME_pl"
+        WELCOME: "WELCOME_pl",
+        START: "Początek:",
+        "pre-sale": "25.09.2023 przedsprzedaż",
+        "Installment plan": "Plan instalacji:",
+        "от 8 до 14 месяцев": "od 8 do 14 miesięcy",
+        "First payment": "Pierwsza płatność:",
+        "от $5000": "od $5000",
+        "about project": "o projekcie",
+        "PROJECT_DESCRIPTION": "Oasis by PARQ to nowoczesny kompleks z najlepszą infrastrukturą na Bali, położony na 37 hektarach, kt\xf3ry obejmie 560 obiekt\xf3w infrastruktury, a mianowicie:",
+        villas: "willi",
+        apartments: "apartamenty",
+        "guest houses": "pensjonaty"
+    },
+    de: {
+        WELCOME: "WELCOME_de",
+        START: "Start:",
+        "pre-sale": "25.09.2023 vorverkauf",
+        "Installment plan": ":",
+        "от 8 до 14 месяцев": "от 8 до 14 месяцев",
+        "First payment": "First payment:",
+        "от $5000": "от $5000",
+        "about project": "about project",
+        "PROJECT_DESCRIPTION": "",
+        villas: "villas",
+        apartments: "apartments",
+        "guest houses": "guest houses"
+    },
+    it: {
+        WELCOME: "WELCOME_it",
+        START: "Inizio:",
+        "pre-sale": "25.09.2023 pre-vendita",
+        "Installment plan": ":",
+        "от 8 до 14 месяцев": "от 8 до 14 месяцев",
+        "First payment": "First payment:",
+        "от $5000": "от $5000",
+        "about project": "about project",
+        "PROJECT_DESCRIPTION": "",
+        villas: "villas",
+        apartments: "apartments",
+        "guest houses": "guest houses"
     }
 };
 
