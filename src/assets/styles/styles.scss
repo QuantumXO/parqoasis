@@ -12,6 +12,7 @@ $primary-font-family: 'Helvetica Neue', arial;
     @content;
   }
 }
+
 @mixin telephone {
   @media (min-device-width: 320px) and (max-device-width: 767px) {
     @content;
@@ -65,7 +66,7 @@ body {
 }
 
 .iScrollIndicator {
-  display: none!important;
+  display: none !important;
 }
 
 .section {
@@ -81,7 +82,7 @@ body {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    background: url(../images/intro-bg-better.png) 50% / cover no-repeat;
+    background: url(../images/intro-bg-better.jpg) 50% / cover no-repeat;
 
     &::before {
       content: "";
@@ -517,7 +518,7 @@ body {
           width: auto;
           height: auto;
           max-width: 100%;
-          max-height: calc(100% - 64px);
+          max-height: calc(100% - 116px);
           @include telephone {
             max-height: 360px;
             margin: 0 auto;
@@ -688,36 +689,45 @@ body {
         }
       }
     }
+
     .bali__cards {
       margin-top: 36px;
+
       .card {
         width: 100%;
         padding: 16px;
         border-radius: 10px;
+
         &:not(.bali) {
           background-color: rgba(#4a4848, 0.3);
           border: 2px solid #4a4848;
         }
+
         &.bali {
           background-color: rgba($secondary-color, 0.3);
           border: 2px solid $secondary-color;
         }
+
         &:nth-child(n+2) {
           margin-top: 16px;
         }
+
         &__row {
           display: flex;
           padding: 8px 0;
           align-items: center;
           color: $secondary-color;
           justify-content: space-between;
+
           &:nth-child(n+2) {
             margin-top: 4px;
             border-bottom: 1px solid $secondary-color;
           }
+
           .label {
             font-size: 14px;
           }
+
           .value {
             font-weight: 700;
           }

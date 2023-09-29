@@ -95,7 +95,7 @@ body {
 }
 
 .section.intro {
-  background: url("intro-bg-better.6815431e.png") 50% / cover no-repeat;
+  background: url("intro-bg-better.13a1d4d7.jpg") 50% / cover no-repeat;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -536,7 +536,7 @@ body {
   width: auto;
   max-width: 100%;
   height: auto;
-  max-height: calc(100% - 64px);
+  max-height: calc(100% - 116px);
 }
 
 @media (device-width >= 320px) and (device-width <= 767px) {
