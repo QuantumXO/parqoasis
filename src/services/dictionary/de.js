@@ -34,7 +34,7 @@ export default {
   'Contact Us': 'Kontaktiere uns',
   'Phone': 'Telefon',
   'Email': 'E-Mail',
-  '6-8 h.': '6-8 Stunden',
+  '6-8 p.': '6-8 Stunden',
   'Placement': 'Platzierung',
   '3 bedrooms': '3 Schlafzimmer',
   'VILLA_200_DESCRIPTION': 'Elegantes mittelgroßes Wohnformat, bei dem die Fassadenveredelung spektakulär mit der umgebenden Grünfläche kontrastiert.',
@@ -54,5 +54,10 @@ export default {
   'Villa': 'Villa',
   'Layouts': 'Layouts:',
   'Terrace': 'Terrasse',
-  'Installment plan': 'Ratenzahlungsplan',
+  'Installment plan': 'Ratenzahlungsplan:',
+  GUEST_HOUSE_INVESTMENT_DESCRIPTION: 'Mindesteinstieg ab $5000 - 1/7 der Kosten für ein Gästehaus',
+  APARTMENTS_INVESTMENT_DESCRIPTION: 'Die Mindestaufnahme beträgt 10 % des Wertes der Wohnung',
+  VILLA_INVESTMENT_DESCRIPTION: 'Die Mindestaufnahme beträgt 10 % des Wertes der Wohnung',
+  'ROI:': 'ROI:',
+  ABOUT_ESTATE_GUEST_HOUSES: 'gästehäuser'
 }

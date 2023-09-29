@@ -1,10 +1,13 @@
 import $ from 'jquery';
 import dictionary from './dictionary';
+import 'fullpage.js/dist/jquery.fullpage.min.css';
 
 window.$ = window.jQuery = $;
+window.IScroll = require('iscroll');
 
+require('fullpage.js/vendors/scrolloverflow.min');
+// import 'fullpage.js'
 require('fullpage.js');
-require('fullpage.js/dist/jquery.fullpage.min.css');
 
 const DEFAULT_LANGUAGE = 'en';
 const SUPPORTED_LANGUAGES = ['en', 'de', 'it', 'pl'];
@@ -56,12 +59,11 @@ $(function () {
   if (window.innerWidth >= 768) {
     $('#fullpage').fullpage({
       paddingTop: '48px',
-      autoScrolling: true,
       scrollHorizontally: false,
       navigation: true,
       scrollBar: true,
       sectionSelector: '.scroll',
-      lazyLoading: true,
+      scrollOverflow: true,
     });
   }
   

@@ -6,6 +6,12 @@ $secondary-color: #ffffff;
 $brand-font-family: 'Mundo Sans Std', arial;
 $primary-font-family: 'Helvetica Neue', arial;
 
+
+@mixin desktop {
+  @media (min-device-width: 768px) {
+    @content;
+  }
+}
 @mixin telephone {
   @media (min-device-width: 320px) and (max-device-width: 767px) {
     @content;
@@ -58,11 +64,16 @@ body {
   margin: 0 auto;
 }
 
+.iScrollIndicator {
+  display: none!important;
+}
+
 .section {
   width: 100%;
   min-height: 100vh;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  //min-height: 1600px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 
   &.intro {
     display: flex;
