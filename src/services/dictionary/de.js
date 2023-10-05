@@ -59,5 +59,9 @@ export default {
   APARTMENTS_INVESTMENT_DESCRIPTION: 'Die Mindestaufnahme beträgt 10 % des Wertes der Wohnung',
   VILLA_INVESTMENT_DESCRIPTION: 'Die Mindestaufnahme beträgt 10 % des Wertes der Wohnung',
   'ROI:': 'ROI:',
-  ABOUT_ESTATE_GUEST_HOUSES: 'gästehäuser'
+  ABOUT_ESTATE_GUEST_HOUSES: 'gästehäuser',
+  '2nd floor': '2. stock',
+  '2nd floor of 3': '2. Stock von 3',
+  apartment: 'wohnung',
+  '3rd floor': '3. stock',
 }

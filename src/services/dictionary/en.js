@@ -60,5 +60,9 @@ export default {
   APARTMENTS_INVESTMENT_DESCRIPTION: 'Minimum admission is 10% of the value of the dwelling',
   VILLA_INVESTMENT_DESCRIPTION: 'Minimum admission is 10% of the value of the dwelling',
   'ROI:': 'ROI:',
-  ABOUT_ESTATE_GUEST_HOUSES: 'guest houses'
+  ABOUT_ESTATE_GUEST_HOUSES: 'guest houses',
+  '2nd floor': '2nd floor',
+  '2nd floor of 3': '2nd floor of 3',
+  apartment: 'apartment',
+  '3rd floor': '3rd floor',
 }

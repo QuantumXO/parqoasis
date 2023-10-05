@@ -1,7 +1,7 @@
 export default {
   START: 'Start presale:',
   'pre-sale': '25.09.2023',
-  'от 8 до 14 месяцев': 'od 8 do 14 misięcy',
+  'от 8 до 14 месяцев': 'od 8 do 14 miesięcy',
   'First payment': 'Inwestycja minimalna:',
   'от $5000': 'od $5000',
   'about project': 'O projekcie',
@@ -13,7 +13,7 @@ export default {
   'Payment is made in cryptocurrency': '*Płatność jest dokonywana w kryptowalucie',
   'Area:': 'Powierzchnia:',
   'Area': 'Powierzchnia',
-  '1-3 floor of 3': '1-3 piętro z 3',
+  '1-3 floor of 3': '1 piętro z 3',
   'Ceiling height': 'Wysokość sufitu:',
   'Laundry': 'Pralnia',
   'Garden': 'Ogród',
@@ -23,7 +23,7 @@ export default {
   'Minimum entry from $5000 - 1/7th of the cost of a guest house': 'Minimalna wpłata od $5000 - 1/7 kosztu domu gościnnego',
   '1st floor': '1 piętro',
   'Private pool': 'Prywatny basen',
-  'Private entrance': 'Prywatne wejście',
+  'Private entrance': 'Oddzielne wejście',
   'Minimum admission is 10% of the value of the dwelling': 'Minimalna wpłata wynosi 10% wartości mieszkania',
   'Plot area': 'Powierzchnia działki',
   'VILLA_150_DESCRIPTION': 'Elegancki średni format mieszkania, gdzie wykończenie elewacji imponująco kontrastuje z otaczającą zielenią.',
@@ -59,5 +59,9 @@ export default {
   APARTMENTS_INVESTMENT_DESCRIPTION: 'Minimalna wpłata wynosi 10% wartości mieszkania',
   VILLA_INVESTMENT_DESCRIPTION: 'Minimalna wpłata wynosi 10% wartości mieszkania',
   'ROI:': 'Roczna rentowność:',
-  ABOUT_ESTATE_GUEST_HOUSES: 'pokojów hotelowych(Dom gościnny)'
+  ABOUT_ESTATE_GUEST_HOUSES: 'pokojów hotelowych(Dom gościnny)',
+  '2nd floor': '2 piętro',
+  '2nd floor of 3': '2 piętro z 3',
+  apartment: 'apartamenty',
+  '3rd floor': '3 piętro',
 }

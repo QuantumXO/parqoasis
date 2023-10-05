@@ -6,7 +6,6 @@ $secondary-color: #ffffff;
 $brand-font-family: 'Mundo Sans Std', arial;
 $primary-font-family: 'Helvetica Neue', arial;
 
-
 @mixin desktop {
   @media (min-device-width: 768px) {
     @content;

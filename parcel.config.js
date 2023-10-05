@@ -6,6 +6,7 @@ module.exports = {
     'transforms': ['@parcel/transformer-js']
   },
   staticFiles: {
-    'staticPath': 'src/static'
+    'staticPath': 'src/static',
+    'staticOutPath': './',
   },
 };

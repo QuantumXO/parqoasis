@@ -23,7 +23,7 @@ export default {
   'Minimum entry from $5000 - 1/7th of the cost of a guest house': 'Ingresso minimo a partire da 5000$ - 1/7 del costo di una Guest House',
   '1st floor': '1 piano',
   'Private pool': 'Piscina privata',
-  'Private entrance': 'Ingresso privato',
+  'Private entrance': 'Ingresso indipendente',
   'Minimum admission is 10% of the value of the dwelling': 'Ingresso minimo è il 10% del costo di un Appartamento',
   'Plot area': 'Superficie del terreno',
   'VILLA_150_DESCRIPTION': 'Elegante formato di alloggio di medie dimensioni, dove la finitura della facciata contrasta spettacolarmente con la vegetazione circostante.',
@@ -59,5 +59,9 @@ export default {
   APARTMENTS_INVESTMENT_DESCRIPTION: 'Ingresso minimo è il 10% del costo di un Appartamento',
   VILLA_INVESTMENT_DESCRIPTION: 'Ingresso minimo è il 10% del costo di una Villa',
   'ROI:': 'ROI:',
-  ABOUT_ESTATE_GUEST_HOUSES: 'guest houses'
+  ABOUT_ESTATE_GUEST_HOUSES: 'guest houses',
+  '2nd floor': '2° piano',
+  '2nd floor of 3': '2° piano di 3',
+  apartment: 'appartamento',
+  '3rd floor': '3° piano',
 }
