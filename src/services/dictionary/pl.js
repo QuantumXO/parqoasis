@@ -13,7 +13,7 @@ export default {
   'Payment is made in cryptocurrency': '*Płatność jest dokonywana w kryptowalucie',
   'Area:': 'Powierzchnia:',
   'Area': 'Powierzchnia',
-  '1-3 floor of 3': '1-3 piano di 3',
+  '1-3 floor of 3': '1-3 piętro z 3',
   'Ceiling height': 'Wysokość sufitu:',
   'Laundry': 'Pralnia',
   'Garden': 'Ogród',
