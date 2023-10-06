@@ -64,4 +64,6 @@ export default {
   '2nd floor of 3': '2° piano di 3',
   apartment: 'appartamento',
   '3rd floor': '3° piano',
+  '3rd floor of 3': '3° piano di 3',
+  '1st floor of 3': '1° piano di 3',
 }
